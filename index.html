@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- GitHub Pages gives us no response headers, so the meta tag is the only CSP lever
+         we have (ARCHITECTURE.md §5 I6). style-src allows 'unsafe-inline' because React
+         style attributes and Vite's injected styles are inline by nature; script-src does
+         NOT, which is the half that matters for injection. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    />
+
+    <title>Sporelo</title>
+    <meta name="description" content="Score the game. Keep the record." />
+    <meta name="theme-color" content="#0B1B33" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Sporelo" />
+
+    <link rel="manifest" href="/sporelo-app/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/sporelo-app/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/sporelo-app/icons/icon-192.png" />
+    <script type="module" crossorigin src="/sporelo-app/assets/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/sporelo-app/assets/index.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Sporelo needs JavaScript to record a match.</noscript>
+  </body>
+</html>

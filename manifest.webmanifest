@@ -1,0 +1,17 @@
+{
+  "name": "Sporelo",
+  "short_name": "Sporelo",
+  "id": "/sporelo-app/",
+  "start_url": "/sporelo-app/",
+  "scope": "/sporelo-app/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B1B33",
+  "theme_color": "#0B1B33",
+  "description": "Score the game. Keep the record.",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
